@@ -13,7 +13,11 @@ def print_percentages(wrestler_data):
         percentage_won = int((win/total)*100)
         percentage_lost = int((lose/total)*100)
         percentage_drawn = int((draw/total)*100)
-    print(f" Wrestler Name : {wrestler} \n Total Matches played: {total} \n Percentage won: {percentage_won} \n Percentage lost: {percentage_lost} \n Percentage drawn: {percentage_drawn}")
+        if percentage_lost>=50:
+            status ="Jobber"
+        else:
+            status="Superstar"
+    print(f" \n {status.upper()}\n Wrestler Name : {wrestler} \n Total Matches played: {total} \n Percentage won: {percentage_won} \n Percentage lost: {percentage_lost} \n Percentage drawn: {percentage_drawn}")
 # Find the total number of matches wrestled
 
 # Find the percentage of matches won
